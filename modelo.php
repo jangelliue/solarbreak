@@ -11,29 +11,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav.css">
     <script src="js/script.js" defer></script>
 </head>
 <body>
-    <header class="site-header">
-        <div class="container site-header-inner">
-            <a href="index.php" style="display:flex;align-items:center;gap:.75rem;font-weight:800;color:var(--color-primary);">
-                <img src="assets/logo.webp" alt="Logo Solar Break" style="height:44px;width:auto;">
-                <span>Solar Break</span>
-            </a>
 
-            <button class="mobile-menu-toggle" type="button" aria-label="Abrir menú" data-menu-toggle>
-                ☰
-            </button>
-
-            <nav class="site-nav" data-site-nav>
-                <a href="index.php">Inicio</a>
-                <a href="modelo.php" class="active">Solar Break</a>
-                <a href="blog.php">Blog</a>
-                <a href="contacto.php">Contacto</a>
-                <a href="login.php">Ingreso</a>
-            </nav>
-        </div>
-    </header>
+<?php include 'includes/header.php'; ?>
 
     <main>
         <section class="section-lg" style="background:linear-gradient(135deg, #00301c, #1a4731);color:#fff;">
@@ -73,7 +56,6 @@
                         La solución está pensada para ofrecer continuidad operativa, eficiencia energética y escalabilidad en entornos viales con alta necesidad de infraestructura.
                     </p>
                 </div>
-
                 <div class="grid grid-3">
                     <article class="card">
                         <h3>Paneles solares</h3>
@@ -97,7 +79,6 @@
                     <span class="badge badge-success">Funcionamiento</span>
                     <h2 class="page-title mt-2">Cómo opera la experiencia Solar Break</h2>
                 </div>
-
                 <div class="grid grid-3">
                     <article class="card text-center">
                         <h3>1. Llegada</h3>
@@ -127,7 +108,6 @@
                         <li>Acceso a una solución alineada con energías limpias.</li>
                     </ul>
                 </article>
-
                 <article class="card">
                     <span class="badge badge-success">Para el aliado comercial</span>
                     <h2 class="page-title mt-2" style="font-size:clamp(1.5rem,3vw,2.2rem);">Beneficios para restaurantes y establecimientos</h2>
@@ -174,17 +154,7 @@
         </section>
     </main>
 
-    <footer class="site-footer">
-        <div class="container text-center">
-            <img src="assets/logo.webp" alt="Logo Solar Break" style="height:48px;width:auto;margin:0 auto 1rem;">
-            <div class="footer-links">
-                <a href="index.php">Inicio</a>
-                <a href="modelo.php">Solar Break</a>
-                <a href="blog.php">Blog</a>
-                <a href="contacto.php">Contacto</a>
-            </div>
-            <p class="text-muted mb-0">© 2026 Solar Break. Proyecto académico sobre energías limpias y movilidad sostenible.</p>
-        </div>
-    </footer>
+<?php include 'includes/footer.php'; ?>
+
 </body>
 </html>

@@ -14,29 +14,12 @@ $articulos_secundarios = array_slice($articulos, 1);
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav.css">
     <script src="js/script.js" defer></script>
 </head>
 <body>
-    <header class="site-header">
-        <div class="container site-header-inner">
-            <a href="index.php" style="display:flex;align-items:center;gap:.75rem;font-weight:800;color:var(--color-primary);">
-                <img src="assets/logo.webp" alt="Logo Solar Break" style="height:44px;width:auto;">
-                <span>Solar Break</span>
-            </a>
 
-            <button class="mobile-menu-toggle" type="button" aria-label="Abrir menú" data-menu-toggle>
-                ☰
-            </button>
-
-            <nav class="site-nav" data-site-nav>
-                <a href="index.php">Inicio</a>
-                <a href="modelo.php">Solar Break</a>
-                <a href="blog.php" class="active">Blog</a>
-                <a href="contacto.php">Contacto</a>
-                <a href="login.php">Ingreso</a>
-            </nav>
-        </div>
-    </header>
+<?php include 'includes/header.php'; ?>
 
     <main>
         <section class="section-lg" style="background:linear-gradient(180deg, #f7f6f2 0%, #fcf9f8 100%);">
@@ -133,17 +116,7 @@ $articulos_secundarios = array_slice($articulos, 1);
         </section>
     </main>
 
-    <footer class="site-footer">
-        <div class="container text-center">
-            <img src="assets/logo.webp" alt="Logo Solar Break" style="height:48px;width:auto;margin:0 auto 1rem;">
-            <div class="footer-links">
-                <a href="index.php">Inicio</a>
-                <a href="modelo.php">Solar Break</a>
-                <a href="blog.php">Blog</a>
-                <a href="contacto.php">Contacto</a>
-            </div>
-            <p class="text-muted mb-0">© 2026 Solar Break. Proyecto académico sobre energías limpias y movilidad sostenible.</p>
-        </div>
-    </footer>
+<?php include 'includes/footer.php'; ?>
+
 </body>
 </html>
