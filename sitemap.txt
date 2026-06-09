@@ -43,28 +43,3 @@ solarbreak/
 ├── acciones.php                  ← Backend admin: actualizar estado / eliminar solicitud (WHERE id)
 ├── script.sql                    ← Script BD: tablas usuarios, solicitudes_informacion, detalle_tecnico
 └── sitemap.txt                   ← Este archivo — estructura del proyecto
-
-
-── CORRECCIONES APLICADAS ──────────────────────────────────────────────
-
-[PHP / BD]
-  • procesar_contacto.php  → columnas corregidas: nombre_establecimiento,
-                             nombre_contacto, correo_contacto (eliminado fecha_solicitud)
-  • login.php              → columna corregida: contrasena (antes: clave)
-  • acciones.php           → WHERE id (antes: WHERE id_solicitud)
-  • admin/panel.php        → SELECT corregido con nombres de columna reales
-  • script.sql             → Typo corregido: DEFAULT en tiene_red_convencional
-
-[UI / Header]
-  • includes/header.php    → Header extraído como include reutilizable
-  • includes/footer.php    → Footer extraído como include reutilizable
-  • index, modelo, blog,
-    contacto.php           → Ahora usan include header/footer (uniformidad total)
-  • css/nav.css            → Grid 3 columnas (1fr auto 1fr) para centrado real del nav
-                             Botón Login fuera del <nav>, columna 3 independiente
-  • header.php             → Texto "Solar Break" ocultado con .sr-only (solo imagen)
-                             Botón renombrado de "Ingreso" a "Login"
-
-[Pendiente]
-  • assets/                → Carpeta con imágenes aún no subida al repositorio
-────────────────────────────────────────────────────────────────────────
