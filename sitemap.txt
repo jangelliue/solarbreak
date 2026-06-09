@@ -1,0 +1,30 @@
+solarbreak/
+├── config/
+│   └── db.php
+├── css/
+│   └── style.css
+├── js/
+│   └── script.js
+├── assets/
+│   ├── logo.webp
+│   ├── logo-white.webp
+│   ├── hero-estacion.webp
+│   ├── mapa-antioquia.webp
+│   ├── estacion-detalle.webp
+│   ├── blog-featured.webp
+│   ├── blog-art1.webp
+│   ├── blog-art2.webp
+│   ├── blog-art3.webp
+│   └── blog-art4.webp
+├── data/
+│   └── articulos.php        ← array PHP del blog
+├── index.php
+├── modelo.php
+├── blog.php
+├── articulo.php
+├── contacto.php
+├── login.php
+├── dashboard.php
+├── logout.php
+├── acciones.php
+└── script.sql
