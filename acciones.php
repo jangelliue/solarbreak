@@ -32,7 +32,7 @@ if ($accion === 'actualizar_estado') {
         exit;
     }
 
-    $sql = "UPDATE solicitudes_informacion SET estado = ?, id_usuario_gestor = ? WHERE id_solicitud = ?";
+    $sql = "UPDATE solicitudes_informacion SET estado = ?, id_usuario_gestor = ? WHERE id = ?";
     $stmt = mysqli_prepare($conn, $sql);
 
     if ($stmt) {
@@ -54,7 +54,7 @@ if ($accion === 'actualizar_estado') {
 }
 
 if ($accion === 'eliminar_solicitud') {
-    $sql = "DELETE FROM solicitudes_informacion WHERE id_solicitud = ?";
+    $sql = "DELETE FROM solicitudes_informacion WHERE id = ?";
     $stmt = mysqli_prepare($conn, $sql);
 
     if ($stmt) {

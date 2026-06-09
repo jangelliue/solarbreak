@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['solicitud_id'], $_POS
     exit;
 }
 
-$sql = "SELECT id, nombre_negocio, tipo_negocio, ubicacion, nombre_responsable, correo_electronico, telefono, mensaje, estado, fecha_solicitud FROM solicitudes_informacion ORDER BY fecha_solicitud DESC";
+$sql = "SELECT id, nombre_establecimiento, tipo_negocio, ubicacion, nombre_contacto, correo_contacto, telefono, mensaje, estado, fecha_registro FROM solicitudes_informacion ORDER BY fecha_registro DESC";
 $resultado = mysqli_query($conn, $sql);
 $solicitudes = [];
 
@@ -138,14 +138,14 @@ if ($resultado) {
                                 ?>
                                 <tr class="border-t border-outline align-top">
                                     <td class="px-4 py-4">
-                                        <div class="font-semibold text-primary"><?php echo htmlspecialchars($solicitud['nombre_negocio']); ?></div>
+                                        <div class="font-semibold text-primary"><?php echo htmlspecialchars($solicitud['nombre_establecimiento']); ?></div>
                                         <div class="text-text-muted text-xs mt-1"><?php echo htmlspecialchars($solicitud['tipo_negocio']); ?></div>
                                     </td>
                                     <td class="px-4 py-4">
-                                        <?php echo htmlspecialchars($solicitud['nombre_responsable']); ?>
+                                        <?php echo htmlspecialchars($solicitud['nombre_contacto']); ?>
                                     </td>
                                     <td class="px-4 py-4">
-                                        <div><?php echo htmlspecialchars($solicitud['correo_electronico']); ?></div>
+                                        <div><?php echo htmlspecialchars($solicitud['correo_contacto']); ?></div>
                                         <div class="text-text-muted text-xs mt-1"><?php echo htmlspecialchars($solicitud['telefono']); ?></div>
                                     </td>
                                     <td class="px-4 py-4">
@@ -162,7 +162,7 @@ if ($resultado) {
                                         </span>
                                     </td>
                                     <td class="px-4 py-4 whitespace-nowrap text-text-muted">
-                                        <?php echo htmlspecialchars($solicitud['fecha_solicitud']); ?>
+                                        <?php echo htmlspecialchars($solicitud['fecha_registro']); ?>
                                     </td>
                                     <td class="px-4 py-4">
                                         <form method="POST" action="panel.php" class="space-y-2 min-w-[160px]">

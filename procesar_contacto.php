@@ -31,8 +31,8 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 }
 
 $sql = "INSERT INTO solicitudes_informacion
-        (nombre_negocio, tipo_negocio, ubicacion, nombre_responsable, correo_electronico, telefono, mensaje, estado, fecha_solicitud)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, NOW())";
+        (nombre_establecimiento, tipo_negocio, ubicacion, nombre_contacto, correo_contacto, telefono, mensaje, estado)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 
 $stmt = mysqli_prepare($conn, $sql);
 

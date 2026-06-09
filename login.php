@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } elseif (!filter_var($correo, FILTER_VALIDATE_EMAIL)) {
         $mensaje_error = 'El correo electrónico no es válido.';
     } else {
-        $sql = "SELECT id, nombre, correo, clave, rol FROM usuarios WHERE correo = ? LIMIT 1";
+        $sql = "SELECT id, nombre, correo, contrasena, rol FROM usuarios WHERE correo = ? LIMIT 1";
         $stmt = mysqli_prepare($conn, $sql);
 
         if ($stmt) {
@@ -31,9 +31,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if ($usuario) {
                 $login_valido = false;
 
-                if (password_verify($clave, $usuario['clave'])) {
+                if (password_verify($clave, $usuario['contrasena'])) {
                     $login_valido = true;
-                } elseif ($clave === $usuario['clave']) {
+                } elseif ($clave === $usuario['contrasena']) {
                     $login_valido = true;
                 }
 
