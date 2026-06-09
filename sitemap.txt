@@ -1,30 +1,70 @@
 solarbreak/
+│
 ├── config/
-│   └── db.php
+│   └── conexion.php              ← Conexión PDO a MySQL (UTF-8, manejo de errores)
+│
 ├── css/
-│   └── style.css
+│   ├── style.css                 ← Estilos globales, tokens de diseño, componentes
+│   └── nav.css                   ← Header sticky (grid 3 col) + footer + responsive móvil
+│
 ├── js/
-│   └── script.js
+│   └── script.js                 ← Hamburguesa móvil, interacciones generales
+│
 ├── assets/
-│   ├── logo.webp
-│   ├── logo-white.webp
-│   ├── hero-estacion.webp
-│   ├── mapa-antioquia.webp
-│   ├── estacion-detalle.webp
-│   ├── blog-featured.webp
-│   ├── blog-art1.webp
-│   ├── blog-art2.webp
-│   ├── blog-art3.webp
-│   └── blog-art4.webp
+│   ├── logo.webp                 ← Logo principal (header)
+│   ├── logo-white.webp           ← Logo blanco (footer / fondos oscuros)
+│   ├── hero-estacion.webp        ← Imagen hero index.php
+│   ├── mapa-antioquia.webp       ← Mapa corredor Medellín–Oriente
+│   ├── estacion-detalle.webp     ← Detalle visual estación Solar Break
+│   ├── blog-featured.webp        ← Imagen artículo destacado
+│   ├── blog-art1.webp            ← Miniatura artículo 1
+│   ├── blog-art2.webp            ← Miniatura artículo 2
+│   ├── blog-art3.webp            ← Miniatura artículo 3
+│   └── blog-art4.webp            ← Miniatura artículo 4
+│
 ├── data/
-│   └── articulos.php        ← array PHP del blog
-├── index.php
-├── modelo.php
-├── blog.php
-├── articulo.php
-├── contacto.php
-├── login.php
-├── dashboard.php
-├── logout.php
-├── acciones.php
-└── script.sql
+│   └── articulos.php             ← Array PHP con artículos del blog (título, slug, imagen, etc.)
+│
+├── includes/                     ← Componentes reutilizables (incluidos con PHP en todas las páginas)
+│   ├── header.php                ← Header uniforme: logo izq | nav centro | Login der | hamburguesa móvil
+│   └── footer.php                ← Footer uniforme: marca + nav + contacto + copyright
+│
+├── admin/
+│   └── panel.php                 ← Panel admin: lista solicitudes de contacto (requiere sesión rol=admin)
+│
+├── index.php                     ← Página de inicio / landing principal
+├── modelo.php                    ← Página del modelo Solar Break (cómo funciona)
+├── blog.php                      ← Listado de artículos del blog
+├── articulo.php                  ← Vista individual de artículo (?slug=...)
+├── contacto.php                  ← Formulario de solicitud de alianza
+├── procesar_contacto.php         ← Backend: valida y guarda solicitud en BD → redirige a contacto.php
+├── login.php                     ← Formulario de acceso admin (password_verify + sesión)
+├── logout.php                    ← Cierra sesión y redirige a login.php
+├── acciones.php                  ← Backend admin: actualizar estado / eliminar solicitud (WHERE id)
+├── script.sql                    ← Script BD: tablas usuarios, solicitudes_informacion, detalle_tecnico
+└── sitemap.txt                   ← Este archivo — estructura del proyecto
+
+
+── CORRECCIONES APLICADAS ──────────────────────────────────────────────
+
+[PHP / BD]
+  • procesar_contacto.php  → columnas corregidas: nombre_establecimiento,
+                             nombre_contacto, correo_contacto (eliminado fecha_solicitud)
+  • login.php              → columna corregida: contrasena (antes: clave)
+  • acciones.php           → WHERE id (antes: WHERE id_solicitud)
+  • admin/panel.php        → SELECT corregido con nombres de columna reales
+  • script.sql             → Typo corregido: DEFAULT en tiene_red_convencional
+
+[UI / Header]
+  • includes/header.php    → Header extraído como include reutilizable
+  • includes/footer.php    → Footer extraído como include reutilizable
+  • index, modelo, blog,
+    contacto.php           → Ahora usan include header/footer (uniformidad total)
+  • css/nav.css            → Grid 3 columnas (1fr auto 1fr) para centrado real del nav
+                             Botón Login fuera del <nav>, columna 3 independiente
+  • header.php             → Texto "Solar Break" ocultado con .sr-only (solo imagen)
+                             Botón renombrado de "Ingreso" a "Login"
+
+[Pendiente]
+  • assets/                → Carpeta con imágenes aún no subida al repositorio
+────────────────────────────────────────────────────────────────────────
