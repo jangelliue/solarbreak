@@ -7,7 +7,7 @@ $articulos = [
         'autor' => 'Equipo Solar Break',
         'fecha' => '2026-05-20',
         'tiempo_lectura' => '4 min',
-        'imagen' => 'assets/blog-art1.webp',
+        'imagen' => 'assets/blog-solar-colombia.webp',
         'resumen' => 'El mercado colombiano de vehículos eléctricos muestra una expansión sostenida y exige nueva infraestructura de carga fuera de las grandes ciudades.',
         'contenido' => [
             'La movilidad eléctrica en Colombia ha dejado de ser una tendencia emergente para convertirse en una necesidad de infraestructura. Cada vez más usuarios y empresas incorporan vehículos eléctricos, lo que presiona la creación de puntos de carga accesibles, confiables y distribuidos en corredores viales.',
@@ -22,7 +22,7 @@ $articulos = [
         'autor' => 'Equipo Solar Break',
         'fecha' => '2026-05-22',
         'tiempo_lectura' => '5 min',
-        'imagen' => 'assets/blog-art2.webp',
+        'imagen' => 'assets/blog-ventas-ev.webp',
         'resumen' => 'La radiación solar del país y los incentivos para energías limpias abren el camino para soluciones de carga híbrida más viables y sostenibles.',
         'contenido' => [
             'Colombia cuenta con condiciones favorables para el aprovechamiento de la energía solar, tanto por su ubicación geográfica como por el impulso regulatorio a las energías renovables. Esto permite pensar en modelos energéticos descentralizados para zonas estratégicas de movilidad.',
@@ -37,7 +37,7 @@ $articulos = [
         'autor' => 'Equipo Solar Break',
         'fecha' => '2026-05-24',
         'tiempo_lectura' => '4 min',
-        'imagen' => 'assets/blog-art3.webp',
+        'imagen' => 'assets/blog-ley-1715.webp',
         'resumen' => 'La expansión de puntos de recarga en carretera será clave para que la movilidad eléctrica crezca con seguridad y confianza.',
         'contenido' => [
             'Uno de los principales retos de la movilidad eléctrica es la percepción de autonomía limitada durante viajes largos. Aunque en las ciudades la red de carga sigue creciendo, los trayectos entre municipios todavía necesitan soluciones más visibles y confiables.',
@@ -52,7 +52,7 @@ $articulos = [
         'autor' => 'Equipo Solar Break',
         'fecha' => '2026-05-26',
         'tiempo_lectura' => '5 min',
-        'imagen' => 'assets/blog-art4.webp',
+        'imagen' => 'assets/blog-ruta-verde.webp',
         'resumen' => 'El proyecto propone integrar restaurantes, parqueaderos y comercios al crecimiento de la recarga sostenible en carretera.',
         'contenido' => [
             'El modelo de Solar Break no se limita a instalar tecnología. También busca construir alianzas con establecimientos que puedan beneficiarse del flujo de usuarios de vehículos eléctricos durante sus paradas de recarga.',
