@@ -8,7 +8,7 @@ $pagina_actual = basename($_SERVER['PHP_SELF']);
         <!-- LOGO (izquierda) -->
         <a href="index.php" class="site-logo">
             <img src="assets/logo.webp" alt="Logo Solar Break" style="height:44px;width:auto;">
-            <span>Solar Break</span>
+            <span class="sr-only">Solar Break</span>
         </a>
 
         <!-- MENÚ HAMBURGUESA (solo móvil) -->
